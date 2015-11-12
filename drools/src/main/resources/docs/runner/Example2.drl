@@ -1,0 +1,6 @@
+rule "Rule 02"
+    when
+        Number( $intValue : intValue )
+    then
+        System.out.println( "Number found with value: " + $intValue );
+end

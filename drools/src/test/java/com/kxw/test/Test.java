@@ -1,5 +1,6 @@
-package com.kxw.drools.test;
+package com.kxw.test;
 
+import com.kxw.begeta.model.Begeta;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

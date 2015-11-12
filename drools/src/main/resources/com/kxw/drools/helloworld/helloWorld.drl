@@ -1,6 +1,6 @@
 package com.kxw.drools.helloworld
 
-import org.drools.examples.helloworld.HelloWorldExample.Message;
+import com.kxw.drools.helloworld.HelloWorld.Message;
 
 rule "Hello World"
     dialect "mvel"

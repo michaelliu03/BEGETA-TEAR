@@ -1,0 +1,34 @@
+package com.kxw.drools.sample
+
+import com.kxw.drools.sample.Item;
+import com.kxw.drools.sample.User;
+import com.kxw.drools.sample.Purchase;
+import com.kxw.drools.sample.DroolsSample;
+
+rule "200-5"
+    when
+        p:Purchase(p.getTotal()>=200)
+    then
+        p.addFavour("200-5",5);
+end
+
+rule "fruit100-5"
+    when
+        p:Purchase(p.getCategotyTotal("fruit")>=100)
+    then
+        p.addFavour("fruit100-5",5);
+end
+
+rule "user score 100-5"
+    when
+        p:Purchase(p.getUser().getUserScore()>=100)
+    then
+        p.addFavour("user score 100-5",5);
+end
+
+rule "Vip 7 -5"
+    when
+        p:Purchase(p.getUser().getVipLevel()>=7)
+    then
+        p.addFavour("Vip 7 -5",5);
+end
