@@ -12,8 +12,11 @@
 
     <modules>
         <module>Begeta</module>
-        <module>hadoop</module>
         <module>drools</module>
+        <module>hadoop</module>
+        <module>hbase</module>
+        <module>kafka</module>
+        <module>storm</module>
     </modules>
 
     <repositories>

@@ -19,3 +19,17 @@ rule "Good Bye"
     then
         System.out.println( message );
 end
+
+/**
+当存在一个Message对象，并且这个Message的status字段值为Message.HELLO的时候，就可以执行下面的then语句了。用自然语言描述就是：当存在一个状态为HELLO的消息的事实时，就执行下面的动作，否则就不做。
+
+其中Message()就是执行类型匹配，意思就是要求Working Memory中存在类型为Message的对象（事实），然后status==Message.HELLO语句呢，就是约束条件，表示该Message对象的status字段为HELLO才符合条件。
+
+另外的m和myMessage分别表示什么呢？m加冒号的意思是将这个Message对象赋值给m，而myMessage加冒号表示将这个Message对象的message字段的值赋值给myMessage变量。然后在下面的then语句中使用这些定义的变量了。
+*/
+
+/**
+这个例子里面前三句都是普通的Java语句，唯一不同的就是下面这个update语句，这个语句的意思就是通知规则引擎m对象发生变化了，m是什么？m就是一个存放在Working Memory里面的一个Message事实，这句话就是说m这个事实发生了变化，那么规则引擎就需要重新进行规则运算，在本例中就是会在执行了update之后执行下面的“GoodBye”规则。
+
+为什么执行“GoodBye”规则？GoodBye规则需要匹配的是status为GOODBYE的Message事实，但是一开始并没有这样的事实存在，只有当“Hello World”规则执行到了update语句的时候，更新了Message事实，这个时候规则引擎重新运算规则，WorkingMemory中就存在status为GOODBYE的Message事实了，“GoodBye”规则就会运行了，这个从控制台输出中就可以看出来了。
+*/
