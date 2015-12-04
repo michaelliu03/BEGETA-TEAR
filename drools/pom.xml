@@ -164,6 +164,11 @@
             <version>3.3.0-v_771</version>
         </dependency>
         <dependency>
+            <groupId>org.eclipse.core</groupId>
+            <artifactId>resources</artifactId>
+            <version>3.3.0-v20070604</version>
+        </dependency>
+        <dependency>
             <groupId>org.mvel</groupId>
             <artifactId>mvel2</artifactId>
             <version>2.2.6.Final</version>
