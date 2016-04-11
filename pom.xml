@@ -29,11 +29,11 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
+        <!--<repository>
             <id>oschina</id>
             <name>oschina Repository</name>
             <url>http://maven.oschina.net/content/groups/public/</url>
-        </repository>
+        </repository>-->
     </repositories>
 
     <properties>
