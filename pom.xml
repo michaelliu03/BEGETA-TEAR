@@ -16,6 +16,7 @@
         <module>hadoop</module>
         <module>hbase</module>
         <module>kafka</module>
+        <module>mahout</module>
         <module>storm</module>
     </modules>
 
@@ -61,7 +62,15 @@
 
 
     <build>
+
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
           <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
