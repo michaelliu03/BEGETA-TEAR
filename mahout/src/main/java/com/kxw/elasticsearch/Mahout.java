@@ -1,4 +1,4 @@
-package com.kxw.helloworld;
+package com.kxw.elasticsearch;
 
 import java.io.File;
 import java.util.List;

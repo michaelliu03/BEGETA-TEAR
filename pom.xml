@@ -13,6 +13,7 @@
     <modules>
         <module>Begeta</module>
         <module>drools</module>
+        <module>elasticsearch</module>
         <module>hadoop</module>
         <module>hbase</module>
         <module>kafka</module>
