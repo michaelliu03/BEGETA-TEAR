@@ -8,6 +8,8 @@
 + `dataDir=/usr/local/soft/zookeeper-3.4.9/tmp`
 + `sh bin/zkServer.sh start`
 
++ `sh bin/zkServer.sh stop`
+
 
 #### 安装storm
 + `wget http://apache.fayea.com/storm/apache-storm-1.0.2/apache-storm-1.0.2.tar.gz`
