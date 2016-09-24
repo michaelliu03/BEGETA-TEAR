@@ -95,3 +95,10 @@ a1.sinks.k1.channel=c1
 + `./bin/flume-ng agent -n a1 -c conf -f flume-kafa-conf.properties -Dflume.root.logger=INFO,console`
 
 
+#### 后续跟进
++ 集群安装
++ 配置参数
++ 基础部件原理
++ 底层实现的简要原理
++ flume 和 logstash对比
+
