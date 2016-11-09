@@ -37,6 +37,7 @@ public class HbaseTest {
         admin.createTable(t);
 
         admin.close();
+
     }
 
     //hbase(main):007:0> list

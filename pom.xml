@@ -20,6 +20,7 @@
         <module>mahout</module>
         <module>spark</module>
         <module>storm</module>
+        <module>solr</module>
         <module>example-fksm</module>
     </modules>
 
@@ -27,8 +28,9 @@
         <repository>
             <id>central</id>
             <name>Central Repository</name>
-             <url>http://central.maven.org/maven2/</url>
+            <!-- <url>http://central.maven.org/maven2/</url>-->
             <!--<url>http://maven.oschina.net/content/groups/public/</url>-->
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
             <layout>default</layout>
             <snapshots>
                 <enabled>false</enabled>
