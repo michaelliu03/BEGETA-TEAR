@@ -23,3 +23,7 @@ lucene,solr,elasticsearch,ansj,sphix
 #### kibana
 
 
+---
+ES完全能满足10亿数据量，5k吞吐量的常见搜索业务需求
+
+

@@ -42,7 +42,10 @@ solr 从零学习开始(1)--整体了解solr
 2. 数据库服务 
 3. Solr服务器
 
-使用Solr索引MySQL数据
++ 使用Solr索引MySQL数据
 <http://www.cnblogs.com/luxiaoxun/p/4442770.html>
+
++ 全文检索引擎 Solr 系列（2）— 全文检索基本原理
+<https://mp.weixin.qq.com/s/sajet1EbDID3k0eawcTUig>
 
 
