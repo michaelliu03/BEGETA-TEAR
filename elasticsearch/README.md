@@ -13,7 +13,7 @@ lucene,solr,elasticsearch,ansj,sphix
 
     
 #### elasticsearch
-+ `bin/elasticsearch`
++ `bin/elasticsearch` (如果你想把 Elasticsearch 作为一个守护进程在后台运行，那么可以在后面添加参数 -d)
 + `http://localhost:9200/`启动Elasticsearch
 + 安装Marvel(Elasticsearch的可视化管理和监控工具) <https://www.elastic.co/downloads/marvel>
 + `curl http://127.0.0.1:9200/_nodes/_local/plugins`  查看节点上的插件列表，检查列表中是否含有 marvel
@@ -25,5 +25,10 @@ lucene,solr,elasticsearch,ansj,sphix
 
 ---
 ES完全能满足10亿数据量，5k吞吐量的常见搜索业务需求
+
+<https://github.com/elastic/elasticsearch/issues/22207>
+Lastly, please note that Elastic does not officially support Elasticsearch on Windows 7.
+
+
 
 
