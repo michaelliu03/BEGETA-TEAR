@@ -104,3 +104,7 @@ a1.sinks.k1.channel=c1
 + 底层实现的简要原理
 + flume 和 logstash对比
 
+
+
+---
+玩转Flume+Kafka原来也就那点事儿:<http://www.jianshu.com/p/f0a08bd4f975>

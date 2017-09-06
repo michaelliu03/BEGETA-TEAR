@@ -55,3 +55,9 @@ hbase(main):002:0>
 #### cluster install
 + 集群安装需要先安装Hadoop
 <http://blog.csdn.net/hguisu/article/details/7244413>
+
+---
+
+数据仓库与数据库的区别:<http://ms.sit.edu.cn/s/8/t/157/a/15382/info.jspy>
+
+---
