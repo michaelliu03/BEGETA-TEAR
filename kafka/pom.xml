@@ -31,10 +31,22 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka_2.10</artifactId>
             <version>0.8.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jmx/jmxri</groupId>
+                    <artifactId>jmxri</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.12</artifactId>
+            <version>1.0.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.sun.jmx/jmxri</groupId>
