@@ -67,6 +67,9 @@ Lastly, please note that Elastic does not officially support Elasticsearch on Wi
 
 当发送请求的时候， 为了扩展负载，更好的做法是轮询集群中所有的节点。
 
+---
+
++ 问题:es深分页，记录上一页的id作为下一页的条
 
 
 

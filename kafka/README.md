@@ -34,3 +34,8 @@ ZeroMQ只是一个网络编程的Pattern库，将常见的网络请求形式（�
 
 ---
 RabbitMQ和kafka从几个角度简单的对比:<http://www.cnblogs.com/davidwang456/p/4076097.html>
+
+---
+
++ 大规模Kafka集群的管理利器: LinkedIn最新开源的Cruise :<https://mp.weixin.qq.com/s/9ou_hm8SrNceEggmeKNQPw>
++ Apache Kafka 1.0：为什么我们等了这么久？:<https://mp.weixin.qq.com/s/Xs-NYcNyt8aM4ZGjDNJeCQ>
