@@ -18,6 +18,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-elasticsearch -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-elasticsearch</artifactId>
+                <version>3.0.2.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
 
         <dependency>
@@ -36,9 +47,32 @@
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
-            <version>2.3.4</version>
+            <version>6.1.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/transport -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+            <version>6.1.1</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+       <!-- <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-elasticsearch</artifactId>
+        </dependency>-->
+        <!--  暂不支持elasticsearch 5 以上, 该由自己来连接, ElasticsearchComponentAutoConfiguration使用transport来连接 -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 </project>

@@ -40,13 +40,44 @@ Elasticsearch 将所有的功能打包成一个单独的服务，这样你可以
 + 如果你想把 Elasticsearch 作为一个守护进程在后台运行，那么可以在后面添加参数 -d
 + Sense 是一个 Kibana 应用 它提供交互式的控制台，通过你的浏览器直接向 Elasticsearch 提交请求
 `./bin/kibana plugin --install elastic/sense`
++ Installing Sense:<https://www.elastic.co/guide/en/sense/current/installing.html>
+Sense is a Kibana app. To get up and running you will first need to download Kibana and install 
+Sense was renamed to Console and it is already available on Kibana 5.*. In Kibana, just click on Dev Tools ....
++ bin/kibana http://localhost:5601
+
 
 #### 和 Elasticsearch 交互
 1. Java API (9300 端口)
     - 节点客户端（Node client）
-    - 传输客户端（Transport client）
+    - 传输客户端（Transport client）(TransportClient类)
 2. RESTful API with JSON over HTTP (端口 9200)
     - 结合 Sense 控制台学习
+    - elasticsearch 5.0引入了一个新的客户端 RestClient类 ，使用HTTP API elasticsearch代替内部协议。这需要更少依赖关系。
+    
+<pre>    
+9200 is for REST.
+9300 for nodes communication...
+At least 9300.
+For 9200, it's up to you. It depends if you want to send REST requests to that node. 
+</pre>   
+
+<pre>
+Client client = TransportClient.builder().build()
+   .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("localhost"), 9300));
+如果连接到一个 Elasticsearch 集群，构建器可以接受多个地址。（在本例中，您只有一个 localhost 节点。）连接到端口 9300，而不是像之前在 REST API 的 cURL 中一样连接到 9200。Java 客户端将会使用这个特殊端口，使用端口 9200 不起作用。（其他 Elasticsearch 客户端，Python 客户端就是其中之一，将会 使用 9200 来访问 REST API。）
+Client client = new TransportClient()    
+        .addTransportAddress(newInetSocketTransportAddress("host1", 9300))    
+        .addTransportAddress(newInetSocketTransportAddress("host2", 9300));    
+client.close(); 
+
+</pre>
+
+<pre>
+可以通过两种方式来连接到elasticsearch（简称es）集群，第一种是通过在你的程序中创建一个嵌入es节点（Node），使之成为es集群的一部分，然后通过这个节点来与es集群通信。第二种方式是用TransportClient这个接口和es集群通信。
+http://blog.csdn.net/ljc2008110/article/details/48652937
+
+你可以设置client.transport.sniff为true来使客户端去嗅探整个集群的状态，把集群中其它机器的ip地址加到客户端中，这样做的好处是一般你不用手动设置集群里所有集群的ip到连接客户端，它会自动帮你添加，并且自动发现新加入集群的机器
+</pre>
 
 #### 面向文档
 + Elasticsearch 是 面向文档 的，意味着它存储整个对象或 文档_。Elasticsearch 不仅存储文档，而且 _索引 每个文档的内容使之可以被检索。

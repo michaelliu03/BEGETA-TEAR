@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
 
     <modules>
@@ -59,6 +59,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.10</junit.version>
+        <spring.boot.version>1.5.2.RELEASE</spring.boot.version>
     </properties>
 
     <dependencyManagement>
@@ -76,9 +77,24 @@
                 <version>1.7.12</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+                <scope>provided</scope>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
 
@@ -147,6 +163,17 @@
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven-plugin -->
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.16.18.1</version>
+            </plugin>
+            <!--
+            1、选择支持注解处理：Settings->Build->Annotation Processors->勾选上Enable annotation processing
+            2、安装插件：Settings->Plugins->单击Browse repositories
+            -->
+
         </plugins>
 
     </build>

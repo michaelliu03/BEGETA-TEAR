@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("org.kxw.solr")
-public class SolrAutoConfiguration {
+public class SolrComponentAutoConfiguration {
 }

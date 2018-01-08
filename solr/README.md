@@ -135,10 +135,21 @@ Solr对外提供标准的http接口来实现对数据的索引的增加、删除
 + 配置IK中文分析器:<http://blog.csdn.net/sunqingzhong44/article/details/71367519>(包含zk操作)
 
 + Solr中的Schema类似于关系数据库中的表结构，它以schema.xml的文本形式存在在conf目录下，在添加文当到索引中时需要指定Schema，Schema文件主要包含三部分：字段（Field）、字段类型（FieldType）、唯一键（uniqueKey）
-
++ Elasticsearch在Solr推出几年后才面世的，通过REST和schema-free（不需要预先定义 Schema，solr是需要预先定义的）的JSON文档提供分布式、多租户全文搜索引擎。
 
 + 搭建solrCloud 要先启动zk服务, 否则无法管理schema文件??
 
 
 
 
+
+
+---
+Solr的优缺点
+优点
+Solr有一个更大、更成熟的用户、开发和贡献者社区。
+支持添加多种格式的索引，如：HTML、PDF、微软 Office 系列软件格式以及 JSON、XML、CSV 等纯文本格式。
+Solr比较成熟、稳定。
+不考虑建索引的同时进行搜索，速度更快。
+缺点
+建立索引时，搜索效率下降，实时索引搜索效率不高。
