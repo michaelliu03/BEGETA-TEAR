@@ -2,6 +2,7 @@
 + <https://github.com/Kingson4Wu/SearchEngine>
 + <https://github.com/Kingson4Wu/lucene_demo>
 
++ CoreSeek（全文检索引擎 Sphinx 中文版）安装使用指南:<http://blog.csdn.net/keyunq/article/details/45129867>
 
 #### elastic
 + <https://mp.weixin.qq.com/s/npXpXgiLZxTV93YgykInwg>

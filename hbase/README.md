@@ -61,3 +61,8 @@ hbase(main):002:0>
 数据仓库与数据库的区别:<http://ms.sit.edu.cn/s/8/t/157/a/15382/info.jspy>
 
 ---
+
++ 基于 HBase 构建可伸缩的分布式事务队列:<https://mp.weixin.qq.com/s?__biz=MjM5NzM0MjcyMQ==&mid=205919194&idx=2&sn=81172e4e6f2c127f1c73fae163661912#rd>
++ Astro —— 华为开源 HBase 的 Spark SQL:<https://mp.weixin.qq.com/s?__biz=MjM5NzM0MjcyMQ==&mid=207709799&idx=3&sn=1700ad0f4b24df6d8f5654ef1e2a14e0&scene=0#rd>
++ HBase 在阿里搜索中的应用实践:<https://mp.weixin.qq.com/s/rGwaXjAam4GXz4mIg4Mgqg>
+

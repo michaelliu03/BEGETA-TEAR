@@ -96,10 +96,14 @@ GET _analyze
 
 + 使用elasticsearch-jdbc工具，编写脚本文件，抽取数据到es中
 + Elasticsearch Suggester- Google在用户刚开始输入的时候是自动补全的，而当输入到一定长度，如果因为单词拼写错误无法补全，就开始尝试提示相似的词。
-那么类似的功能在Elasticsearch里如何实现呢？ 答案就在Suggesters API。 Suggesters基本的运作原理是将输入的文本分解为token，然后在索引的字典里查找相似的term并返回。 
+那么类似的功能在Elasticsearch里如何实现呢？ 答案就在Suggesters API。 Suggesters基本的运作原理是将输入的文本分解为token，然后在索引的字典里查找相似的term并返回。/_suggest 
++ Elasticsearch Suggester详解:<https://elasticsearch.cn/article/142>
 + Lucene的api中有实现查询文章相似度的接口，叫MoreLikeThis。Elasticsearch封装了该接口，通过Elasticsearch的More like this查询接口，我们可以非常方便的实现基于内容的推荐。
-                           
+当搜索无结果或结果过少时提供推荐搜索词给用户。                     
                            
 
++ 使用Elasticsearch、Kafka和Cassandra构建流式数据中心
+
++ 面试小结之Elasticsearch篇:<http://ginobefunny.com/post/elasticsearch_interview_questions/>
 
 

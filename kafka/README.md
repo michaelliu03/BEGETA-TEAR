@@ -39,3 +39,8 @@ RabbitMQ和kafka从几个角度简单的对比:<http://www.cnblogs.com/davidwang
 
 + 大规模Kafka集群的管理利器: LinkedIn最新开源的Cruise :<https://mp.weixin.qq.com/s/9ou_hm8SrNceEggmeKNQPw>
 + Apache Kafka 1.0：为什么我们等了这么久？:<https://mp.weixin.qq.com/s/Xs-NYcNyt8aM4ZGjDNJeCQ>
++ 跟我学Kafka之NIO通信机制:<https://mp.weixin.qq.com/s?__biz=MjM5MDAxNjkyMA==&mid=2650719402&idx=2&sn=edb79569aae77e1ee8a7db4228decd50&scene=0#wechat_redirect>
++ kafka数据可靠性深度解读:<http://blog.csdn.net/u013256816/article/details/71091774>
++ 浅谈分布式消息技术 Kafka:<https://mp.weixin.qq.com/s/eoEwVsy8PX_jAD_mxrn_1A>
++ Kafka 基本原理:<https://mp.weixin.qq.com/s/ItqhIhC0RMMSIV-L54xeoA>
++ Spark Streaming场景应用-Kafka 数据读取方式:<https://mp.weixin.qq.com/s/MmINr7YLVlLvWch2AMz3xQ>
