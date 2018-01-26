@@ -1,18 +1,26 @@
 package org.kxw.example.fksm.kafka.storm;
 
+import java.util.Arrays;
+
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
-import org.apache.storm.kafka.*;
+import org.apache.storm.kafka.BrokerHosts;
+import org.apache.storm.kafka.KafkaSpout;
+import org.apache.storm.kafka.SpoutConfig;
+import org.apache.storm.kafka.StringScheme;
+import org.apache.storm.kafka.ZkHosts;
 import org.apache.storm.spout.SchemeAsMultiScheme;
 import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.utils.Utils;
 
-import java.util.Arrays;
-
 
 /**
  * <a href='http://blog.csdn.net/wangyangzhizhou/article/details/52440862'>@link</a>
+ * 创建拓扑MyTopology，先配置好KafkaSpout的配置SpoutConfig，其中zk的地址端口和根节点，将id为KAFKA_SPOUT_ID的spout通过shuffleGrouping关联到jsonBolt对象。
+ *
+ * 本地测试时直接不带运行参数运行即可，放到集群是需带拓扑名称作为参数。(本地模式)
+ * 另外需要注意的是：KafkaSpout默认从上次运行停止时的位置开始继续消费，即不会从头开始消费一遍，因为KafkaSpout默认每2秒钟会提交一次kafka的offset位置到zk上，如果要每次运行都从头开始消费可以通过配置实现。
  */
 public class MyTopology {
 

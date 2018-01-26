@@ -1,5 +1,7 @@
 package org.kxw.example.fksm.kafka.storm;
 
+import java.util.Map;
+
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -9,8 +11,6 @@ import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Map;
 
 public class JsonBolt extends BaseRichBolt {
     private static final Logger LOG = LoggerFactory
@@ -45,6 +45,7 @@ public class JsonBolt extends BaseRichBolt {
 
         this.collector.emit(tuple, values);
         this.collector.ack(tuple);
+        //每次都调用collector 对象的 ack() 方法确认已成功处理了一个元组。
     }
 
     @Override
