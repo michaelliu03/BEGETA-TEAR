@@ -24,8 +24,11 @@ public class TopologyMain {
         TopologyBuilder builder = new TopologyBuilder();
         builder.setSpout("word-reader", new WordReader());
         builder.setBolt("word-normalizer", new WordNormalizer()).shuffleGrouping("word-reader");
+        //builder.setBolt("word-normalizer", new WordNormalizer()).customGrouping("word-reader", new ModuleGrouping());
         //builder.setBolt("word-counter", new WordCounter()).shuffleGrouping("word-normalizer");
         builder.setBolt("word-counter", new WordCounter(), 2).fieldsGrouping("word-normalizer", new Fields("word"));
+
+
 
 
         //配置
@@ -64,6 +67,16 @@ public class TopologyMain {
          simple: 1
 
          */
+
+       /* try {
+            StormSubmitter.submitTopology("Count-Word-Topology-With_Refresh-Cache", conf, builder.createTopology());
+        } catch (AlreadyAliveException e) {
+            e.printStackTrace();
+        } catch (InvalidTopologyException e) {
+            e.printStackTrace();
+        } catch (AuthorizationException e) {
+            e.printStackTrace();
+        }*/
 
     }
 }
